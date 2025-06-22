@@ -2,9 +2,11 @@ FROM python:3.11-bullseye
 
 WORKDIR /app
 
-COPY . .
+COPY requirements/ requirements/
 
 RUN pip install -r requirements/backend.in
+
+COPY . .
 
 EXPOSE 8000
 
